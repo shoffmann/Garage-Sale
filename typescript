@@ -1,0 +1,38 @@
+Script started on Wed Sep 23 13:42:04 2009
+[1m[7m%[m[1m[m                                                                                                                                  [m[m[m[J[~/garagesale] [Krrake gems install
+(in /Users/shoffmann/garagesale)
+
+I = Installed
+F = Frozen
+R = Framework (loaded before rails starts)
+rake aborted!
+Don't know how to build task 'install'
+
+(See full trace by running task with --trace)
+[1m[7m%[m[1m[m                                                                                                                                  [m[m[m[J[~/garagesale] [Kcclear
+[H[2J[1m[7m%[m[1m[m                                                                                                                                  [m[m[m[J[~/garagesale] [Kclearrake gems install[17Dscript           [11D/server[13Dexit         [9Dscript/server
+=> Booting WEBrick
+=> Rails 2.3.2 application starting on http://0.0.0.0:3000
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_type.rb:80: warning: already initialized constant FBML
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2009-09-23 13:42:54] INFO  WEBrick 1.3.1
+[2009-09-23 13:42:54] INFO  ruby 1.8.7 (2008-08-11) [universal-darwin10.0]
+[2009-09-23 13:42:54] WARN  TCPServer Error: Address already in use - bind(2)
+[2009-09-23 13:42:54] WARN  TCPServer Error: Address already in use - bind(2)
+Exiting
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/utils.rb:73:in `initialize': Address already in use - bind(2) (Errno::EADDRINUSE)
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/utils.rb:73:in `new'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/utils.rb:73:in `create_listeners'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/utils.rb:70:in `each'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/utils.rb:70:in `create_listeners'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:75:in `listen'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:63:in `initialize'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:24:in `initialize'
+	from /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:9:in `new'
+	from /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:9:in `run'
+	from /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+	from /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+	from /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+	from script/server:3
+[1m[7m%[m[1m[m                                                                                                                                  [m[m[m[J[~/garagesale] [K

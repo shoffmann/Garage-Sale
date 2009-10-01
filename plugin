@@ -1,0 +1,112 @@
+Script started on Thu Sep 24 11:00:26 2009
+[1m[7m%[m[1m[m                                                                                                                        [m[m[m[J[~/garagesale] [Kscript plugin list
+Script started, output file is plugin
+script: list: No such file or directory
+
+Script done, output file is plugin
+[1m[7m%[m[1m[m                                                                                                                        [m[m[m[J[~/garagesale] [Kscript plugin list[P[11C [12D/plugin list[11D
+account_location              http://dev.rubyonrails.com/svn/rails/plugins/account_location/
+acts_as_list                  http://dev.rubyonrails.com/svn/rails/plugins/acts_as_list/
+acts_as_nested_set            http://dev.rubyonrails.com/svn/rails/plugins/acts_as_nested_set/
+acts_as_tree                  http://dev.rubyonrails.com/svn/rails/plugins/acts_as_tree/
+atom_feed_helper              http://dev.rubyonrails.com/svn/rails/plugins/atom_feed_helper/
+auto_complete                 http://dev.rubyonrails.com/svn/rails/plugins/auto_complete/
+continuous_builder            http://dev.rubyonrails.com/svn/rails/plugins/continuous_builder/
+deadlock_retry                http://dev.rubyonrails.com/svn/rails/plugins/deadlock_retry/
+exception_notification        http://dev.rubyonrails.com/svn/rails/plugins/exception_notification/
+http_authentication           http://dev.rubyonrails.com/svn/rails/plugins/http_authentication/
+in_place_editing              http://dev.rubyonrails.com/svn/rails/plugins/in_place_editing/
+javascript_test               http://dev.rubyonrails.com/svn/rails/plugins/javascript_test/
+legacy                        http://dev.rubyonrails.com/svn/rails/plugins/legacy/
+localization                  http://dev.rubyonrails.com/svn/rails/plugins/localization/
+open_id_authentication        http://dev.rubyonrails.com/svn/rails/plugins/open_id_authentication/
+scaffolding                   http://dev.rubyonrails.com/svn/rails/plugins/scaffolding/
+scriptaculous_slider          http://dev.rubyonrails.com/svn/rails/plugins/scriptaculous_slider/
+ssl_requirement               http://dev.rubyonrails.com/svn/rails/plugins/ssl_requirement/
+token_generator               http://dev.rubyonrails.com/svn/rails/plugins/token_generator/
+tzinfo_timezone               http://dev.rubyonrails.com/svn/rails/plugins/tzinfo_timezone/
+tztime                        http://dev.rubyonrails.com/svn/rails/plugins/tztime/
+upload_progress               http://dev.rubyonrails.com/svn/rails/plugins/upload_progress/
+[1m[7m%[m[1m[m                                                                                                                        [m[m[m[J[~/garagesale] [Kscript/plugin list[12D [11C    /[6C install git://github.com/mmangino/facebooker.git[56D [7C                                                [49D/[6C install git://github.com/mmangino/facebooker.git
+already installed: facebooker (git://github.com/mmangino/facebooker.git).  pass --force to reinstall
+[1m[7m%[m[1m[m                                                                                                                        [m[m[m[J[~/garagesale] [Kscript/plugin install git://github.com/mmangino/facebooker.git[48Dli[2C                                            [44D    update
+[1m[7m%[m[1m[m                                                                                                                        [m[m[m[J[~/garagesale] [Kscript/plugin update      help
+Unknown command: help
+Usage: plugin [OPTIONS] command
+Rails plugin manager.
+GENERAL OPTIONS
+  -r, --root=DIR                   Set an explicit rails app directory.
+                                   Default: /Users/shoffmann/garagesale
+  -s, --source=URL1,URL2           Use the specified plugin repositories instead of the defaults.
+  -v, --verbose                    Turn on verbose output.
+  -h, --help                       Show this help message.
+COMMANDS
+  discover   Discover plugin repositories.
+  list       List available plugins.
+  install    Install plugin(s) from known repositories or URLs.
+  update     Update installed plugins.
+  remove     Uninstall plugins.
+  source     Add a plugin source repository.
+  unsource   Remove a plugin repository.
+  sources    List currently configured plugin repositories.
+EXAMPLES
+  Install a plugin:
+    plugin install continuous_builder
+
+  Install a plugin from a subversion URL:
+    plugin install http://dev.rubyonrails.com/svn/rails/plugins/continuous_builder
+
+  Install a plugin from a git URL:
+    plugin install git://github.com/SomeGuy/my_awesome_plugin.git
+
+  Install a plugin and add a svn:externals entry to vendor/plugins
+    plugin install -x continuous_builder
+
+  List all available plugins:
+    plugin list
+
+  List plugins in the specified repository:
+    plugin list --source=http://dev.rubyonrails.com/svn/rails/plugins/
+
+  Discover and prompt to add new repositories:
+    plugin discover
+
+  Discover new repositories but just list them, don't add anything:
+    plugin discover -l
+
+  Add a new repository to the source list:
+    plugin source http://dev.rubyonrails.com/svn/rails/plugins/
+
+  Remove a repository from the source list:
+    plugin unsource http://dev.rubyonrails.com/svn/rails/plugins/
+
+  Show currently configured repositories:
+    plugin sources
+
+[1m[7m%[m[1m[m                                                                                                                        [m[m[m[J[~/garagesale] [Kcclear
+[H[2J[1m[7m%[m[1m[m                                                                                                                        [m[m[m[J[~/garagesale] [Ksscript/server
+=> Booting WEBrick
+=> Rails 2.3.2 application starting on http://0.0.0.0:3000
+/Library/Ruby/Gems/1.8/gems/actionpack-2.3.2/lib/action_controller/mime_type.rb:80: warning: already initialized constant FBML
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2009-09-24 11:02:09] INFO  WEBrick 1.3.1
+[2009-09-24 11:02:09] INFO  ruby 1.8.7 (2008-08-11) [universal-darwin10.0]
+[2009-09-24 11:02:09] WARN  TCPServer Error: Address already in use - bind(2)
+[2009-09-24 11:02:09] WARN  TCPServer Error: Address already in use - bind(2)
+Exiting
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/utils.rb:73:in `initialize': Address already in use - bind(2) (Errno::EADDRINUSE)
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/utils.rb:73:in `new'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/utils.rb:73:in `create_listeners'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/utils.rb:70:in `each'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/utils.rb:70:in `create_listeners'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:75:in `listen'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:63:in `initialize'
+	from /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:24:in `initialize'
+	from /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:9:in `new'
+	from /Library/Ruby/Gems/1.8/gems/rack-1.0.0/lib/rack/handler/webrick.rb:9:in `run'
+	from /Library/Ruby/Gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+	from /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+	from /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+	from script/server:3
+[1m[7m%[m[1m[m                                                                                                                        [m[m[m[J[~/garagesale] [K

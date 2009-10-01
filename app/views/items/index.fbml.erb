@@ -1,0 +1,34 @@
+<% unless @friends_items.blank? %>
+	</br></br>
+	<div id="friend_item_list">
+		<h2>Friends' Items:</h2>
+		</br>
+		<div>
+			<% for item in @friends_items %>
+				<%= fb_profile_pic item.user, :class => 'friend_avatar' %>
+				<div class="friend_item_indent">
+					<div class="fbbluebox">
+	 					<span class="friend_name">
+							<%= link_to(fb_name(item.user, :capitalize=>true, :use_you=>false, 
+												:linked=>false), user_items_path(item.user)) %> posted
+						</span>
+						<br/>
+						<span class="friend_post_time">
+							at <%= item.created_at.strftime('%l:%M %p') %>
+							on <%= item.created_at.strftime('%B %d, %Y') %>
+						</span>
+						<span class="comment_button">Comment</span>
+						<span class="like_button">Like</span>
+					</div>
+					<div class="friend_item">
+						<span class="friend_item_title"><%= item.title %></span>
+						<%= link_to item.title, (item_path(item) unless item.title.nil?) %>
+						<span class="friend_item_price"><%= item.price %></span>
+						<div class="friend_item_desc"><%= item.description %></div>
+					</div>
+					<div class="fbcontentdivider"/>
+				</div>
+			<% end %>
+		</div>
+	</div>
+<% end %>
