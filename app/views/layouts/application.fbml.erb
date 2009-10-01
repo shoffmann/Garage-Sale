@@ -4,7 +4,6 @@
 <head>
 	<fb:header />  
 	<%= stylesheet_link_tag 'style', :cache => true %>
-	<%= stylesheet_link_tag 'base' %>
 </head>
 <div>
 	<% fb_tabs do %>
@@ -16,20 +15,6 @@
 </div>
 
 <div class="fbbody">
-	<div id="container">
-		<div id="main">
-			<% if flash[:notice] %><div id="notice"><%= flash[:notice] %></div><% end %>
-			<% if flash[:warning] %><div id="warning"><%= flash[:warning] %></div><% end %>
-			<%= yield :layout %>
-		</div>
-	</div>
-	<!-- 
-		Include your js at the bottom for faster 
-		loading. Thanks YSlow!
-	-->
-	<%= javascript_include_tag 'jquery' %>
-	<%= javascript_include_tag 'jrails' %>
-	<%= javascript_include_tag 'application' %>
-		<%= yield :js %>
+	<%= yield %>
 </div>
 
