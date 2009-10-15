@@ -1,4 +1,3 @@
-.clear { clear:both; }
 
 /* ==================== */
 /* Default Facebook CSS */
@@ -82,8 +81,21 @@
     cursor: hand;
 }
 
+/* Facebook Button Style */
+.fbbutton {
+	background-color: #3B5998;
+	border-color: #D9DFEA #0E1F5B #0E1F5B #D9DFEA;
+	border-style: solid;
+	border-width: 1px;
+	color: #ffffff;
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size: 11px;
+	padding: 2px 15px 3px;
+	text-align: center;
+}
+
 /* ================= */
-/* Basic Funtions    */
+/* Basic Buttons     */
 /* ================= */
 
 .comment_button {

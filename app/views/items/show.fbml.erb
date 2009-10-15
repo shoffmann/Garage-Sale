@@ -17,13 +17,10 @@
 		
 		<% if @item.user == current_user %>
 			<div class="clear"></div>
-			<div class="item_buttons">
-				<%= link_to "Edit", edit_item_path(@item) %>
-				<%= link_to("Delete", {:action => "destroy", :id => @item },
-						:confirm => "Are you sure you want to delete this item?", 
-						:method => :delete) %>
-
-			</div>
+			<%= link_to "Edit", edit_item_path(@item) %>
+			<%= link_to("Delete", {:action => "destroy", :id => @item },
+					:confirm => "Are you sure you want to delete this item?", 
+					:method => :delete) %>
 		<% end %>
 	</div>
 
