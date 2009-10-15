@@ -1,9 +1,15 @@
 <p>
 	<%= f.error_messages %>
 	
-	<%= f.text_field :title, :label=>"Item" %>
-	<%= f.text_field :price, :label=>"Price" %>
-	<%= f.text_area :description, :label=>"Description", :rows=>20 %>
-
-
+	<div class="item_edit_indent">
+		<p class="item_edit_label">Item:</p>
+		<%= f.text_field :title %>
+		<br/>
+		<p class="item_edit_label">Price:</p>
+		<%= f.text_field :price %>
+		<br/>
+		<p class="item_edit_label">Description:</p>
+		<%= f.text_area :description, :rows=>20 %>
+	</div>
 </p>
+<br/>

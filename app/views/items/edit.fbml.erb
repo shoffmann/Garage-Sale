@@ -1,4 +1,6 @@
-<% facebook_form_for(@item, :url => item_path(@item), :canvas => false, :html => { :multipart => true, :method => :put }) do |f| %>
+<h1>Update Item</h1>
+
+<% form_for(@item, :url => item_path(@item), :canvas => false, :html => { :multipart => true, :method => :put }) do |f| %>
 	<%= render :partial => "form", :locals => {:f => f} %>
-	<%= f.buttons "Update Item" %>
+	<%= f.submit "Update" %>
 <% end %>

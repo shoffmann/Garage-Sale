@@ -169,7 +169,7 @@
 
 
 /* ================= */
-/* Item Detail       */
+/* Item Show Detail  */
 /* ================= */
 .item {
 	min-height: 300px;
@@ -220,4 +220,14 @@
 
 .item_buttons {
 	vertical-align: bottom;
+}
+
+/* ================= */
+/* Item Edit Detail  */
+/* ================= */
+.item_edit_indent {
+	margin-left: 70px;
+}
+.item_edit_label {
+	font-weight: bold;
 }

@@ -1,6 +1,6 @@
 <h1>Create a New Item</h1>
 
-<% facebook_form_for(@item, :html => { :multipart => true }) do |f| %>
+<% form_for(@item, :canvas => false, :html => { :multipart => true }) do |f| %>
 	<%= render :partial => "form", :locals => {:f => f} %>
-	<%= f.buttons "Add Item" %>
+	<%= f.submit "Add" %>
 <% end %>

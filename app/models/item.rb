@@ -1,7 +1,7 @@
 class Item < ActiveRecord::Base
   belongs_to :user
   has_many :comments
-  validates_presence_of :title
+  validates_presence_of :title, :price
   
   def self.find_for_friends(friends_facebook_ids)
     Item.find(:all,
