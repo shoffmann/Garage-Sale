@@ -24,40 +24,45 @@
 		<% end %>
 	</div>
 
-</br></br><h1>Images:</h1>
-<% if @has_photos %>
-	<% @photos.each do |photo| %>
-  	<p>
-    	<%= link_to image_tag(photo.public_filename(:thumb)), photo_path(photo) %>
-    	<%= link_to 'Delete', photo, :confirm => 'Are you sure?', :method => :delete %>
-  	</p>
+	</br></br><h1>Images:</h1>
+	<% if @has_photos %>
+		<% @photos.each do |photo| %>
+	  	<p>
+	    	<%= link_to image_tag(photo.public_filename(:thumb)), photo_path(photo) %>
+	    	<%= link_to 'Delete', photo, :confirm => 'Are you sure?', :method => :delete %>
+	  	</p>
+		<% end %>
+	<% else %>
+		No Photos
 	<% end %>
-<% else %>
-	No Photos
-<% end %>
-
 
 </div>
 
 <div class="clear"></div>
-
-<br/><br/><br/><br/>
+<br/><br/>
 <div class="fbcontentdivider"/>
-<% if @item.has_comments? %>
-	<li>
-	    <h3>Comments</h3>
-	    <ul class="comments">
-    		<%= render  :partial => "comments/comment",
-                  		:collection => @item.comments %>
-    	</ul>
-	</li>
-<% end %>
 
-<!-- Trying to use Facebook's built-in commenting. Not posting.
-<%= fb_comments( "comments_for_#{@item.id}", true, true, 20,:showform => true, :title => "Comments") %>
--->
+<!-- Comments -->
+<div>
+	<h3 class="fbbluebox">
+		Comments
+	</h3>
 
-<li>
-	<%= render :partial => "comments/form" %>
-</li>
+	<div>		<!-- Add New Comment -->
+		<%= render :partial => "comments/form" %>
+	<div>
+		
+	<br/>
+	<% if @item.has_comments? %>		<!-- Display Existing Comments -->
+		<div class="comments">
+			<div id="comment_posts">
+				<%= render  :partial => "comments/comment",	:collection => @item.comments %>
+			</div>
+	  </div>
+	<% end %>
+</div>
+
+
+
+
 

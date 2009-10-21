@@ -243,3 +243,66 @@
 .item_edit_label {
 	font-weight: bold;
 }
+
+/* ================= */
+/* Comment Show      */
+/* ================= */
+.comments {
+	margin: 0 0 15px;
+}
+
+#comment_posts {
+	float: left;
+	margin: 0 0 15px;
+	padding: 0;
+}
+
+.comment_post {
+	float: left;
+	margin: 0 0 15px;
+	padding: 0;
+	width: 100%;
+}
+
+.comment_image {
+	text-align: left;
+	vertical-align: top; 
+	width: 55px;
+}
+
+.comment_content {
+	vertical-align: top; 
+}
+
+.comment_info {
+	border-top: 1px solid #3B5998;
+	width: 100%;
+}
+
+.comment_header {
+	background: #F7F7F7 none repeat scroll 0 0;
+	border-bottom: 1px solid #D8DFEA;
+	padding: 3px 5px;
+}
+
+.comment_text {
+	width: 440px;
+	padding: 5px;
+}
+
+.comment_footer {
+	
+}
+
+.comment_actions {
+	border-bottom: 1px solid #D8DFEA;
+	border-top: medium none;
+	clear: right;
+	padding: 3px 5px;
+}
+
+a.comment_delete_button {
+	font-size: 11px;
+	color: #3b5998;
+	font-weight: normal;
+}
