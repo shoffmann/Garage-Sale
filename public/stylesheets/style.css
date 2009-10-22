@@ -115,27 +115,36 @@
 
 #user_item_list {
 	list-style: none;
-    width: 90%;
+  width: 90%;
 }
 
 .user_item_indent {
 	margin-left: 55px;
 }
 
-.user_item { }
+.user_item {
+	width: 100%;
+}
+
+a.user_item_title {
+	font-size: 15px;
+	font-weight: bold;
+	min-width: 600px;
+}
+
+.user_item_price {
+	text-align: right;
+	float: right;
+}
+
+.user_item_desc {
+	padding: 10px 0 0 0;
+}
 
 .item_post_time {
 	font-size: 10px;
 }
 
-.user_item_title {
-	font-size: 15px;
-	font-weight: bold;
-}
-
-.user_item_price { }
-
-.user_item_desc { }
 
 
 /* ================= */
@@ -170,14 +179,16 @@
     padding: 10px;
 }
 
-.friend_item_title {
+a.friend_item_title {
 	font-size: 15px;
 	font-weight: bold;
 }
 
 .friend_item_price { }
 
-.friend_item_desc { }
+.friend_item_desc {
+	padding: 5px 0 0 0;
+}
 
 
 /* ================= */
@@ -193,18 +204,26 @@
 
 .item_info {
 	list-style: none;
-    width: 90%;
-    padding: 10px;
+	min-height: 250px;
+  padding: 0 10px 10px 0;
+}
+
+.item_header {
+	width: 100%;
 }
 
 .item_title {
 	font-size: 25px;
 	font-weight: bold;
+	width: 80%;
+	line-height: 100%;
 }
 
 .item_price { 
 	font-size: 15px;
-	float: right;
+	vertical-align: top;
+	text-align: right;
+	width: 20%;
 }
 
 .item_desc { }

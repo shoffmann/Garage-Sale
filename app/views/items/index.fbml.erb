@@ -21,8 +21,7 @@
 						<span class="like_button">Like</span>
 					</div>
 					<div class="friend_item">
-						<span class="friend_item_title"><%= item.title %></span>
-						<%= link_to item.title, (item_path(item) unless item.title.nil?) %>
+						<%= link_to item.title, (item_path(item) unless item.title.nil?), :class=>"friend_item_title" %>
 						<span class="friend_item_price"><%= item.price %></span>
 						<div class="friend_item_desc"><%= item.description %></div>
 					</div>
