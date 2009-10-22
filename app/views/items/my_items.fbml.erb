@@ -14,15 +14,17 @@
 						<%= link_to item.title, (item_path(item) unless item.title.nil?), :class=>"user_item_title" %>
 					</span>
 					<% if !item.comments_count.nil? %>
-						<% if item.comments_count == 1 %>
-							<span class="user_item_price"><%= item.comments_count %> comment</span>
-						<% else %>
-							<span class="user_item_price"><%= item.comments_count %> comments</span>
-						<% end %>
+							<span class="user_item_comments">
+								<% if item.comments_count == 1 %>
+									<%= item.comments_count %> comment
+								<% else %>
+									<%= item.comments_count %> comments
+								<% end %>
+							</span>
 					<% end %>
 					</div>
 					<div class="item_post_time">
-						posted <%= item.created_at.strftime('%l:%M %p') %>
+						posted at <%= item.created_at.strftime('%l:%M %p') %>
 						on <%= item.created_at.strftime('%B %d, %Y') %>
 					</div>
 					
