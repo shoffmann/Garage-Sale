@@ -1,4 +1,6 @@
-<% unless @friends_items.blank? %>
+<% if @friends_items.blank? %>
+	<h2>Your friends do not have any items to display.  Try inviting your friends to participate.</h2>
+<% else %>
 	</br></br>
 	<div id="friend_item_list">
 		<h2>Friends' Items:</h2>
@@ -12,12 +14,23 @@
 							<%= link_to(fb_name(item.user, :capitalize=>true, :use_you=>false, 
 												:linked=>false), user_items_path(item.user)) %> posted
 						</span>
+						<% if !item.comments_count.nil? %>
+								<span class="user_item_comments">
+									<% if item.comments_count == 1 %>
+										<%= item.comments_count %> comment
+									<% else %>
+										<%= item.comments_count %> comments
+									<% end %>
+								</span>
+						<% end %>
 						<br/>
 						<span class="friend_post_time">
 							at <%= item.created_at.strftime('%l:%M %p') %>
 							on <%= item.created_at.strftime('%B %d, %Y') %>
 						</span>
+						·
 						<span class="comment_button">Comment</span>
+						·
 						<span class="like_button">Like</span>
 					</div>
 					<div class="friend_item">

@@ -135,6 +135,7 @@ a.user_item_title {
 .user_item_comments {
 	text-align: right;
 	float: right;
+	font-weight: normal;
 }
 
 .user_item_desc {
