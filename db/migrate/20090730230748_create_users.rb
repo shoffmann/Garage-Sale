@@ -1,7 +1,7 @@
 class CreateUsers < ActiveRecord::Migration
   def self.up
     create_table "users", :force => true do |t|
-      t.integer :facebook_id,:limit=>20
+      t.integer :facebook_id, :limit=>8
       t.string :session_key
       t.timestamps
     end

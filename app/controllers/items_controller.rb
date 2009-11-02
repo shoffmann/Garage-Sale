@@ -19,6 +19,9 @@ class ItemsController < ApplicationController
   def create
     @item = @current_user.items.new(params[:item])
     if @item.save
+      UserPublisher.deliver_profile_update(@current_user)
+      UserPublisher.register_item
+      UserPublisher.deliver_item(@item)
       redirect_to my_items_items_path
     else
       render :action => :new 
@@ -36,6 +39,7 @@ class ItemsController < ApplicationController
   def update
     @item = Item.find(params[:id])
     @item.update_attributes(params[:item])
+    flash[:notice] = "Item updated"
     redirect_to item_path
   end
 

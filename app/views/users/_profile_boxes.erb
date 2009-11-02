@@ -1,0 +1,10 @@
+<%= link_to(fb_name(@user, 	:possessive=>true, :use_you=>true, :reflexive=>true, :capitalize=>true, :show_network=>true),
+						user_items_url(@user)) %> Items:
+<br/>
+<% for item in @user.items %>
+	<hr/>
+	<%= link_to item.title, (item_url(item)) %>
+	posted <%= item.created_at.strftime('%l:%M %p') %>
+	on <%= item.created_at.strftime('%B %d, %Y') %>
+	<br/>
+<% end %>

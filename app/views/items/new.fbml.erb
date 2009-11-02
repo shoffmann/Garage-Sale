@@ -1,6 +1,17 @@
+<% if @user_action_to_publish %>
+  <script>
+    <%=fb_show_feed_dialog @user_action_to_publish %>
+  </script>
+<% end %>
+
+<fb:prompt-permission perms="publish_stream">
+	Grant permission for status updates 
+</fb:prompt-permission>
+
 <h1>Create a New Item</h1>
 
 <% form_for(@item, :canvas => false, :html => { :multipart => true }) do |f| %>
 	<%= render :partial => "form", :locals => {:f => f} %>
 	<%= f.submit "Add" %>
 <% end %>
+
