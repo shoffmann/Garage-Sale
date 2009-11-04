@@ -3,11 +3,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 
 <head>
-	<fb:header />  
 	<%= stylesheet_link_tag 'scaffold', :cache => true %>
 	<%= stylesheet_link_tag 'style', :cache => true %>
 </head>
-<br />
+
+<fb:header />  
+
 <%= fb_add_profile_section %>
 <br />
 <%= facebook_messages %>
@@ -16,24 +17,11 @@
 		<%= fb_tab_item "Home", items_path %>
 		<%= fb_tab_item "My Items", my_items_items_path %>
 		<%= fb_tab_item "Post New Item", new_item_path %>
-		<%= fb_tab_item "Invite Friends", items_path, :align=>"right" %>
+		<%= fb_tab_item "Invite Friends", new_invitation_path, :align=>"right" %>
 	<% end %>
 	<br/>
+</div>
 	
-
-	<%= link_to_function 'Invite your Friends!', 
-	   "fb_connect_invite_friends({type: 'Garage Sale', 
-	       												invitation_copy:'Add the Garage Sale app and start posting items from your garage.', 
-	       												request_action_text:'Invite your friends to join Garage Sale.' })" %>
-
-			<% content_for("invite_user") do %>
-				invites you to check out Garage Sale, a marketplace to buy and sell notes for your classes and on class material. 
-				<%= fb_req_choice("Join the Fun!",	items_path) %>
-			<% end %>
-			<% fb_request_form("Garage Sale", "invite_user", items_path) do %>
-				<%= fb_multi_friend_selector("Invite your friends to check out Garage Sale") %>
-				<%= fb_request_form_submit %>
-			<% end %>
-
+<div>
 	<%= yield %>
 </div>

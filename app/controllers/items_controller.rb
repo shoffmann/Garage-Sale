@@ -19,9 +19,9 @@ class ItemsController < ApplicationController
   def create
     @item = @current_user.items.new(params[:item])
     if @item.save
-      UserPublisher.deliver_profile_update(@current_user)
+      UserPublisher.deliver_profile_update(@current_user) rescue nil
       UserPublisher.register_item
-      UserPublisher.deliver_item(@item)
+      UserPublisher.deliver_item(@item) rescue nil
       redirect_to my_items_items_path
     else
       render :action => :new 

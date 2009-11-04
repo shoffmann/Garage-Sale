@@ -1,0 +1,9 @@
+<h2>Invitations Sent To:</h2><br/>
+
+<ul id="invitation_list">
+	<% for id in @sent_to_ids%>
+		<li class="invitation_avatar"><%= fb_profile_pic id %></li>
+		<li class="invitation_friend"><%= fb_name id, :capitalize=>true, :linked=>true, :show_network=>true %></li>
+	<% end %>
+	<br/>
+</ul>

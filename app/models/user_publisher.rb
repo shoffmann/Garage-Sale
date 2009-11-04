@@ -1,5 +1,32 @@
 class UserPublisher < Facebooker::Rails::Publisher
 
+# Item notifications #
+  def item_notification(item)
+    send_as :notification
+    recipients  item.user_id
+    from current_user
+    fbml  <<-MESSAGE
+  	  <fb:fbml> 
+  	  #{name item.user_id} commented on #{item}.
+  	  #{link_to "Message them back", item_url}
+  	  </fb:fbml>
+  	MESSAGE
+  end
+  
+  def item_notification_email(item)
+    send_as :email
+    recipients  item.user_id
+    from current_user
+    title "Someone is interested in your item"
+    fbml  <<-MESSAGE
+  	  <fb:fbml> 
+  	  #{name item.user_id} commented on #{item}.
+  	  #{link_to "Message them back", item_url}
+  	  </fb:fbml>
+  	MESSAGE
+  end
+
+# Item Wall Feeds
   def item_template
     one_line_story_template "{*actor*} added {*new_item*} to {*userlink*}."
     one_line_story_template "{*actor*} added items to Garage Sale"
@@ -15,6 +42,7 @@ class UserPublisher < Facebooker::Rails::Publisher
           :applink => link_to("Garage Sale", items_path)
   end
 
+# User Profile Updates
   def profile_update(user)
     send_as :profile
     recipients user

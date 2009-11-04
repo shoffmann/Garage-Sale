@@ -1,0 +1,9 @@
+<% content_for("invite_user") do %>
+	<%= fb_name(current_user) %> invites you to check out Garage Sale, a great way to get rid of items from your garage and make some money at the same time.
+	<%= fb_req_choice("Join the Fun!",	new_item_path(:from=>current_user,:canvas=>true))%>
+<% end %>
+<% fb_request_form("Garage Sale", "invite_user", invitations_path) do %>
+	<%= fb_multi_friend_selector(
+		"Invite your friends to check out Garage Sale",
+		:exclude_ids=>@not_potential_disciples.join(",")) %>
+<% end %>

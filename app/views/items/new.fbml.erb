@@ -4,14 +4,14 @@
   </script>
 <% end %>
 
-<fb:prompt-permission perms="publish_stream">
-	Grant permission for status updates 
-</fb:prompt-permission>
-
 <h1>Create a New Item</h1>
 
+<form promptpermission="email">
 <% form_for(@item, :canvas => false, :html => { :multipart => true }) do |f| %>
 	<%= render :partial => "form", :locals => {:f => f} %>
 	<%= f.submit "Add" %>
 <% end %>
+</form>
 
+	<%= fb_prompt_permissions(['email', 'publish_stream'], 
+														'Would you like to receive notifications by email about this item?') %>

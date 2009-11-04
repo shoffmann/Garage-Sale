@@ -169,7 +169,7 @@ a.user_item_title {
 
 .friend_name {
 	font-size: 12px;
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .friend_post_time {
@@ -325,4 +325,23 @@ a.comment_delete_button {
 	font-size: 11px;
 	color: #3b5998;
 	font-weight: normal;
+}
+
+/* ================= */
+/* invitation List   */
+/* ================= */
+
+#invitation_list {
+	margin-left: 50px;
+}
+
+.invitation_avatar {
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+
+.invitation_friend {
+	font-size: 11px;
+	margin-left: 90px;
 }
