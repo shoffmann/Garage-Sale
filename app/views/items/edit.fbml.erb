@@ -1,6 +1,7 @@
 <h1>Update Item</h1>
 
-<% form_for(@item, :url => item_path(@item), :canvas => false, :html => { :multipart => true, :method => :put }) do |f| %>
+<% form_for(@item, :url => item_path(@item), :canvas => false, 
+						:html => { :multipart => true, :method => :put, :promptpermission=>"email,publish_stream" }) do |f| %>
 	<%= render :partial => "form", :locals => {:f => f} %>
 	<%= f.submit "Update" %>
 <% end %>

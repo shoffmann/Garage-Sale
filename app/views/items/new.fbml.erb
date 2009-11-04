@@ -1,17 +1,9 @@
-<% if @user_action_to_publish %>
-  <script>
-    <%=fb_show_feed_dialog @user_action_to_publish %>
-  </script>
-<% end %>
-
 <h1>Create a New Item</h1>
 
-<form promptpermission="email">
-<% form_for(@item, :canvas => false, :html => { :multipart => true }) do |f| %>
+<% form_for(@item, :canvas => false, :html => { :multipart => true, :promptpermission=>"email,publish_stream" }) do |f| %>
 	<%= render :partial => "form", :locals => {:f => f} %>
+	<fb:prompt-permission perms="email">
+		Opt-in to receive emails from us
+	</fb:prompt-permission>
 	<%= f.submit "Add" %>
 <% end %>
-</form>
-
-	<%= fb_prompt_permissions(['email', 'publish_stream'], 
-														'Would you like to receive notifications by email about this item?') %>
