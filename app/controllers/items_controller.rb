@@ -19,6 +19,7 @@ class ItemsController < ApplicationController
   def create
     @item = @current_user.items.new(params[:item])
     if @item.save
+      flash[:notice] = "Item added"
       UserPublisher.deliver_profile_update(@current_user) rescue nil
       UserPublisher.register_item
       UserPublisher.deliver_item(@item) rescue nil
@@ -38,9 +39,15 @@ class ItemsController < ApplicationController
   
   def update
     @item = Item.find(params[:id])
-    @item.update_attributes(params[:item])
-    flash[:notice] = "Item updated"
-    redirect_to item_path
+    if @item.update_attributes(params[:item])
+      flash[:notice] = "Item updated"
+      UserPublisher.deliver_profile_update(@current_user) rescue nil
+      UserPublisher.register_item
+      UserPublisher.deliver_item(@item) rescue nil
+      redirect_to item_path
+    else
+      render :action => :edit 
+    end
   end
 
   def destroy

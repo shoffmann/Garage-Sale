@@ -1,6 +1,7 @@
 <h1>Create a New Item</h1>
 
-<% form_for(@item, :canvas => false, :html => { :multipart => true, :promptpermission=>"email,publish_stream" }) do |f| %>
+<% form_for(@item, :canvas => false, 
+						:html => { :multipart => true, :promptpermission=>"email,publish_stream" }) do |f| %>
 	<%= render :partial => "form", :locals => {:f => f} %>
 	<fb:prompt-permission perms="email">
 		Opt-in to receive emails from us
