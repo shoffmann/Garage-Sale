@@ -1,5 +1,5 @@
 <% if @friends_items.blank? %>
-	<h2>Your friends do not have any items to display.  Try inviting your friends to participate.</h2>
+	<h2><br/>Your friends do not have any items posted.  Click <%= link_to "here", new_invitation_path %> to invite your friends to participate.</h2>
 <% else %>
 	</br></br>
 	<div id="friend_item_list">
