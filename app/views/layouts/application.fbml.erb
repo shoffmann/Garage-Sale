@@ -7,9 +7,12 @@
 	<%= stylesheet_link_tag 'style', :cache => true %>
 </head>
 
-<fb:header />  
-
-<%= fb_add_profile_section %>
+<fb:header>
+<div>
+	Garage Sale
+	<div id="profile_add"><%= fb_add_profile_section %></div>
+</div>
+</fb:header>
 <br />
 <%= facebook_messages %>
 <div>

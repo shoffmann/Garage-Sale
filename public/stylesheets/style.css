@@ -95,6 +95,14 @@
 }
 
 /* ================= */
+/* Basic             */
+/* ================= */
+
+#profile_add {
+	float: right;
+}
+
+/* ================= */
 /* Basic Buttons     */
 /* ================= */
 
@@ -178,7 +186,7 @@ a.user_item_title {
 }
 
 .friend_item {
-    padding: 10px;
+  padding: 10px;
 }
 
 a.friend_item_title {
