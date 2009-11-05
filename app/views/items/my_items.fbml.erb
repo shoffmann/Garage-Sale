@@ -1,36 +1,42 @@
 <h2>
 	<%= fb_profile_pic @user %>
-	<%= fb_name @user, 	:possessive=>true, :use_you=>true, :reflexive=>true, :capitalize=>true, 
-						:linked=>true, :show_network=>true %> Items:
+	<% if !@items.empty? %>
+		<%= fb_name @user, 	:possessive=>true, :use_you=>true, :reflexive=>true, :capitalize=>true, 
+												:linked=>true, :show_network=>true %> Items:
+	<% else %>
+		You currently have no items posted. Click <%= link_to "here", new_item_path %> to add some.
+	<% end %>
 </h2>
 </br>
 <div id="user_item_list">
-	<% for item in @items %>
-		<div>
-			<div class="user_item_indent">
-				<div class="user_item">
-					<div class="user_item_header">
-					<span>
-						<%= link_to item.title, (item_path(item) unless item.title.nil?), :class=>"user_item_title" %>
-					</span>
-					<% if !item.comments_count.nil? %>
-							<span class="user_item_comments">
-								<% if item.comments_count == 1 %>
-									<%= item.comments_count %> comment
-								<% else %>
-									<%= item.comments_count %> comments
-								<% end %>
-							</span>
-					<% end %>
-					</div>
-					<div class="item_post_time">
-						posted at <%= item.created_at.strftime('%l:%M %p') %>
-						on <%= item.created_at.strftime('%B %d, %Y') %>
-					</div>
+	<% if !@items.empty? %>
+		<% for item in @items %>
+			<div>
+				<div class="user_item_indent">
+					<div class="user_item">
+						<div class="user_item_header">
+						<span>
+							<%= link_to item.title, (item_path(item) unless item.title.nil?), :class=>"user_item_title" %>
+						</span>
+						<% if !item.comments_count.nil? %>
+								<span class="user_item_comments">
+									<% if item.comments_count == 1 %>
+										<%= item.comments_count %> comment
+									<% else %>
+										<%= item.comments_count %> comments
+									<% end %>
+								</span>
+						<% end %>
+						</div>
+						<div class="item_post_time">
+							posted at <%= item.created_at.strftime('%l:%M %p') %>
+							on <%= item.created_at.strftime('%B %d, %Y') %>
+						</div>
 					
+					</div>
+					<div class="fbcontentdivider"/>
 				</div>
-				<div class="fbcontentdivider"/>
 			</div>
-		</div>
+		<% end %>
 	<% end %>
 </div>

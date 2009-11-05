@@ -3,8 +3,5 @@
 <% form_for(@item, :canvas => false, 
 						:html => { :multipart => true, :promptpermission=>"email,publish_stream" }) do |f| %>
 	<%= render :partial => "form", :locals => {:f => f} %>
-	<fb:prompt-permission perms="email">
-		Opt-in to receive emails from us
-	</fb:prompt-permission>
 	<%= f.submit "Add" %>
 <% end %>

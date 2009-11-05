@@ -116,6 +116,7 @@
 #user_item_list {
 	list-style: none;
   width: 90%;
+	min-height: 200px;
 }
 
 .user_item_indent {
