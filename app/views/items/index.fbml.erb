@@ -10,10 +10,8 @@
 				<%= fb_profile_pic item.user, :class => 'friend_avatar' %>
 				<div class="friend_item_indent">
 					<div class="fbbluebox">
-	 					<span class="friend_name">
-							<%= link_to(fb_name(item.user, :capitalize=>true, :use_you=>false, 
-												:linked=>false), user_items_path(item.user)) %> posted
-						</span>
+						<%= link_to (fb_name(item.user, :capitalize=>true, :use_you=>false),
+												user_items_path(item.user), :class=>"friend_name") %> posted
 						<% if !item.comments_count.nil? %>
 								<span class="user_item_comments">
 									<% if item.comments_count == 1 %>
