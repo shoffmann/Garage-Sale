@@ -28,8 +28,12 @@
 							<% end %>
 						</div>
 						<div class="item_post_time">
-							posted at <%= item.created_at.strftime('%l:%M %p') %>
-							on <%= item.created_at.strftime('%B %d, %Y') %>
+							<% if item.updated? %>
+								updated
+							<% else %>
+								posted
+							<% end %>
+							<%= item.item_display_time() %>
 						</div>
 					
 					</div>

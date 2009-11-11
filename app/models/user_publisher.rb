@@ -27,4 +27,15 @@ class UserPublisher < Facebooker::Rails::Publisher
           :applink => link_to("Garage Sale", items_url)
   end
 
+  def item_comment(item, fromuser)
+    send_as :notification
+    recipients item.user
+    from fromuser
+    fbml  <<-MESSAGE
+      <fb:fbml> 
+      Someone commented on your item
+      </fb:fbml>
+  	MESSAGE
+  end
+
 end

@@ -8,7 +8,7 @@ class ItemsController < ApplicationController
   end
 
   def my_items
-    @items = @current_user.items
+    @items = @current_user.items.find(:all, :order=>"items.updated_at desc" )
   end
   
 
