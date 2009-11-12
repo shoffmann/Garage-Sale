@@ -7,5 +7,5 @@ class User < ActiveRecord::Base
   def friends_with_items(friends_facebook_ids)
 	  User.find(:all, :conditions=>["users.facebook_id in (?)", friends_facebook_ids])
   end
-  
+
 end
