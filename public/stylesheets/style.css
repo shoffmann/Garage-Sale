@@ -106,6 +106,14 @@
 /* Basic Buttons     */
 /* ================= */
 
+.paginate {
+	margin-left: 55px;
+}
+
+.paginator {
+	float: right;
+}
+
 .comment_button {
 	font-size: 11px;
 	color: #3b5998;
@@ -114,6 +122,19 @@
 .like_button {
 	font-size: 11px;
 	color: #3b5998;
+}
+
+.new_button {
+	background-color: white;
+	border-color: #D9DFEA #0E1F5B #0E1F5B #D9DFEA;
+	border-style: solid;
+	border-width: 1px;
+	color: #ffffff;
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size: 11px;
+	padding: 2px 5px 3px;
+	text-align: center;
+
 }
 
 .fbbutton:visited {

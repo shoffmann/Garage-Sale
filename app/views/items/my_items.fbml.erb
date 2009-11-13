@@ -41,5 +41,13 @@
 				</div>
 			</div>
 		<% end %>
+
+		<!-- Page Navigation -->
+		<ul class="paginate">
+			<span class="new_button"><%= link_to "Add New Item", new_item_path %></span>
+			<span class="paginator"><%= will_paginate @items %></span>
+		</ul>
+		<!-- /Page Navigation -->
+
 	<% end %>
 </div>

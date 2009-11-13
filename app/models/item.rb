@@ -7,7 +7,6 @@ class Item < ActiveRecord::Base
     Item.find(:all,
               :conditions=>["users.facebook_id in (?)",friends_facebook_ids],
               :include=>[:user],
-              :limit=>20,
               :order=>"items.updated_at desc" )
   end
   

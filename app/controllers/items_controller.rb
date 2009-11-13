@@ -4,11 +4,16 @@ class ItemsController < ApplicationController
   
   def index
     list_of_friends = (params[:fb_sig_friends]||"").split(/,/)
-    @friends_items = Item.find_for_friends(list_of_friends)
+    @friends_items = Item.find_for_friends(list_of_friends).paginate( 
+      :page=>params[:page], 
+      :per_page=>10)
   end
 
   def my_items
-    @items = @current_user.items.find(:all, :order=>"items.updated_at desc" )
+    @items = @current_user.items.paginate(
+      :page=>params[:page], 
+      :per_page=>5, 
+      :order=>"items.updated_at desc")
   end
   
 
