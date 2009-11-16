@@ -19,7 +19,7 @@
 	<% fb_tabs do %>
 		<%= fb_tab_item "Home", items_path, :selected=>!@friends_items.nil? %>
 		<%= fb_tab_item "My Items", my_items_items_path, :selected=>!@items.nil?  %>
-		<%= fb_tab_item "Post New Item", new_item_path, :selected=>!@item.nil?  %>
+		<%= fb_tab_item "Post New Item", new_item_path, :selected=>(!@item.nil? and @item.title.nil?) %>
 		<%= fb_tab_item "Become a Fan", fb_about_url, :align=>"right" %>
 		<%= fb_tab_item "Invite Friends", new_invitation_path, :selected=>!@not_potential_disciples.nil?,
 					:align=>"right" %>
