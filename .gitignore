@@ -1,3 +1,4 @@
+config/facebooker.yml
 log/*.log
 log/searchd.*
 tmp/**/*
